@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-felisbattery
+Exec=harbour-felisbattery
+Name=FelisBattery
+Name[cs]=FelisBattery
+Comment=Battery and charger diagnostics
+Comment[cs]=Diagnostika baterie a nabíjení
+
+[X-Sailjail]
+OrganizationName=cz.feliscatus
+ApplicationName=felisbattery
+Permissions=
+Sandboxing=Disabled

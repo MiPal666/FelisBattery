@@ -1,0 +1,15 @@
+* Sat Oct 03 2026 Michal Kasik <MiPal666@users.noreply.github.com> - 0.1.2-1
+- English is now the default UI language; Czech translation added.
+- Main and section headings moved to the left for easier left-to-right reading.
+- Main menu moved to a Sailfish PullDownMenu at the top.
+- "USB type" renamed to "Power source type" to avoid implying connector type.
+- Health values localized in the UI while diagnostic exports remain English/raw.
+- Technical information remains on a separate page with standard Sailfish back navigation.
+
+* Sat Oct 03 2026 Michal Kasik <MiPal666@users.noreply.github.com> - 0.1.1-1
+- Compact two-column main screen.
+- Technical information moved to a separate page.
+- Added cat + battery application icon.
+
+* Sat Oct 03 2026 Michal Kasik <MiPal666@users.noreply.github.com> - 0.1.0-1
+- Initial test version.
