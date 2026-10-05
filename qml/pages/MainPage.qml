@@ -107,8 +107,18 @@ Page {
                 CompactValue { width: (batteryGrid.width - batteryGrid.columnSpacing) / 2; label: qsTr("Power"); value: batteryMonitor.summary.power || "—" }
                 CompactValue { width: (batteryGrid.width - batteryGrid.columnSpacing) / 2; label: qsTr("Temperature"); value: batteryMonitor.summary.temperature || "—" }
                 CompactValue { width: (batteryGrid.width - batteryGrid.columnSpacing) / 2; label: qsTr("Current charge"); value: batteryMonitor.summary.charge || "—" }
-                CompactValue { width: (batteryGrid.width - batteryGrid.columnSpacing) / 2; label: qsTr("Full capacity"); value: batteryMonitor.summary.full || "—" }
-                CompactValue { width: (batteryGrid.width - batteryGrid.columnSpacing) / 2; label: qsTr("Design capacity"); value: batteryMonitor.summary.design || "—" }
+                CompactValue {
+                    width: (batteryGrid.width - batteryGrid.columnSpacing) / 2
+                    label: qsTr("Reported full capacity")
+                    value: batteryMonitor.summary.full || "—"
+                    valueColor: batteryMonitor.summary.fullCapacityMismatch ? Theme.errorColor : Theme.primaryColor
+                }
+                CompactValue {
+                    width: (batteryGrid.width - batteryGrid.columnSpacing) / 2
+                    label: qsTr("Reported design capacity")
+                    value: batteryMonitor.summary.design || "—"
+                    valueColor: batteryMonitor.summary.designCapacityMismatch ? Theme.errorColor : Theme.primaryColor
+                }
                 CompactValue { width: (batteryGrid.width - batteryGrid.columnSpacing) / 2; label: qsTr("Condition"); value: batteryMonitor.summary.condition || "—" }
                 CompactValue { width: (batteryGrid.width - batteryGrid.columnSpacing) / 2; label: qsTr("Cycle count"); value: batteryMonitor.summary.cycles || "—" }
                 CompactValue { width: (batteryGrid.width - batteryGrid.columnSpacing) / 2; label: qsTr("Health"); value: batteryMonitor.summary.health || "—" }
@@ -132,6 +142,17 @@ Page {
                 CompactValue { width: (chargingGrid.width - chargingGrid.columnSpacing) / 2; label: qsTr("Input voltage"); value: batteryMonitor.summary.inputVoltage || "—" }
                 CompactValue { width: (chargingGrid.width - chargingGrid.columnSpacing) / 2; label: qsTr("Input current"); value: batteryMonitor.summary.inputCurrent || "—" }
                 CompactValue { width: (chargingGrid.width - chargingGrid.columnSpacing) / 2; label: qsTr("Input power"); value: batteryMonitor.summary.inputPower || "—" }
+            }
+
+            Label {
+                width: parent.width - 2 * Theme.horizontalPageMargin
+                x: Theme.horizontalPageMargin
+                visible: batteryMonitor.summary.capacitySpecMismatch === true
+                wrapMode: Text.WordWrap
+                color: Theme.errorColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                topPadding: Theme.paddingMedium
+                text: qsTr("Red values are reported by the kernel but differ from Jolla's published specification (%1).").arg(batteryMonitor.summary.publishedCapacity || "5450 mAh")
             }
 
             Label {

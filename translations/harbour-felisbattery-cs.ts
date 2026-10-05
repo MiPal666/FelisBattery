@@ -150,12 +150,12 @@
         <translation>Aktuální náboj</translation>
     </message>
     <message>
-        <source>Full capacity</source>
-        <translation>Plná kapacita</translation>
+        <source>Reported full capacity</source>
+        <translation>Hlášená plná kapacita</translation>
     </message>
     <message>
-        <source>Design capacity</source>
-        <translation>Návrhová kapacita</translation>
+        <source>Reported design capacity</source>
+        <translation>Hlášená návrhová kapacita</translation>
     </message>
     <message>
         <source>Condition</source>
@@ -204,6 +204,10 @@
     <message>
         <source>Input power</source>
         <translation>Vstupní výkon</translation>
+    </message>
+    <message>
+        <source>Red values are reported by the kernel but differ from Jolla&apos;s published specification (%1).</source>
+        <translation>Červené hodnoty hlásí kernel, ale liší se od zveřejněné specifikace Jolly (%1).</translation>
     </message>
     <message>
         <source>Detailed charging diagnostics are designed for Jolla Phone 2026. Basic battery information may still work on another device.</source>

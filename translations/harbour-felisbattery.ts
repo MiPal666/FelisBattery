@@ -27,95 +27,95 @@
 <context>
     <name>BatteryMonitor</name>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="158"/>
-        <location filename="../src/batterymonitor.cpp" line="180"/>
-        <location filename="../src/batterymonitor.cpp" line="249"/>
+        <location filename="../src/batterymonitor.cpp" line="168"/>
+        <location filename="../src/batterymonitor.cpp" line="190"/>
+        <location filename="../src/batterymonitor.cpp" line="263"/>
         <source>Charging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="160"/>
-        <location filename="../src/batterymonitor.cpp" line="253"/>
+        <location filename="../src/batterymonitor.cpp" line="170"/>
+        <location filename="../src/batterymonitor.cpp" line="267"/>
         <source>Discharging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="162"/>
+        <location filename="../src/batterymonitor.cpp" line="172"/>
         <source>Full</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="164"/>
+        <location filename="../src/batterymonitor.cpp" line="174"/>
         <source>Not charging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="172"/>
+        <location filename="../src/batterymonitor.cpp" line="182"/>
         <source>Direct charging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="176"/>
+        <location filename="../src/batterymonitor.cpp" line="186"/>
         <source>Standard charging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="182"/>
+        <location filename="../src/batterymonitor.cpp" line="192"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="184"/>
+        <location filename="../src/batterymonitor.cpp" line="194"/>
         <source>Source connected, not charging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="188"/>
+        <location filename="../src/batterymonitor.cpp" line="198"/>
         <source>On battery</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="215"/>
+        <location filename="../src/batterymonitor.cpp" line="225"/>
         <source>Good</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="216"/>
+        <location filename="../src/batterymonitor.cpp" line="226"/>
         <source>Overheat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="217"/>
+        <location filename="../src/batterymonitor.cpp" line="227"/>
         <source>Dead</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="218"/>
+        <location filename="../src/batterymonitor.cpp" line="228"/>
         <source>Over voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="219"/>
+        <location filename="../src/batterymonitor.cpp" line="229"/>
         <source>Unspecified failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="220"/>
+        <location filename="../src/batterymonitor.cpp" line="230"/>
         <source>Cold</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="239"/>
+        <location filename="../src/batterymonitor.cpp" line="253"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="239"/>
+        <location filename="../src/batterymonitor.cpp" line="253"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/batterymonitor.cpp" line="251"/>
+        <location filename="../src/batterymonitor.cpp" line="265"/>
         <source>Connected / not charging</source>
         <translation type="unfinished"></translation>
     </message>
@@ -188,77 +188,82 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="110"/>
-        <source>Full capacity</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="111"/>
-        <source>Design capacity</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/MainPage.qml" line="112"/>
-        <source>Condition</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="113"/>
-        <source>Cycle count</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="114"/>
-        <source>Health</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="115"/>
-        <source>Technology</source>
+        <source>Reported full capacity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="118"/>
-        <source>Charging</source>
+        <source>Reported design capacity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="122"/>
+        <source>Condition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="123"/>
+        <source>Cycle count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
+        <source>Health</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="125"/>
+        <source>Technology</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="128"/>
+        <source>Charging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="138"/>
         <source>Source connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="129"/>
+        <location filename="../qml/pages/MainPage.qml" line="139"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="130"/>
+        <location filename="../qml/pages/MainPage.qml" line="140"/>
         <source>Power source type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="141"/>
         <source>Active path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="132"/>
+        <location filename="../qml/pages/MainPage.qml" line="142"/>
         <source>Input voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="133"/>
+        <location filename="../qml/pages/MainPage.qml" line="143"/>
         <source>Input current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="134"/>
+        <location filename="../qml/pages/MainPage.qml" line="144"/>
         <source>Input power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="144"/>
+        <location filename="../qml/pages/MainPage.qml" line="155"/>
+        <source>Red values are reported by the kernel but differ from Jolla&apos;s published specification (%1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="165"/>
         <source>Detailed charging diagnostics are designed for Jolla Phone 2026. Basic battery information may still work on another device.</source>
         <translation type="unfinished"></translation>
     </message>

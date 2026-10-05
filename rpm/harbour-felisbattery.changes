@@ -1,3 +1,10 @@
+* Mon Oct 05 2026 Michal Kasik <MiPal666@users.noreply.github.com> - 0.1.3-1
+- Rename capacity fields to "Reported full capacity" and "Reported design capacity".
+- Highlight reported capacity values in red when they differ from Jolla's published 5450 mAh specification.
+- Add an on-screen note explaining that highlighted values come from the kernel but differ from Jolla's published specification.
+- Keep kernel-reported values unchanged; no correction or substitution is applied.
+- Update README documentation for the capacity comparison.
+
 * Sat Oct 03 2026 Michal Kasik <MiPal666@users.noreply.github.com> - 0.1.2-1
 - English is now the default UI language; Czech translation added.
 - Main and section headings moved to the left for easier left-to-right reading.

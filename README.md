@@ -4,6 +4,14 @@ FelisBattery is a small native Sailfish OS battery monitor and read-only chargin
 
 Although it runs without sandboxing, it only reads battery and charging information from the system and does not modify any settings or write to sysfs.
 
+## 0.1.3
+
+- `Full capacity` renamed to `Reported full capacity`
+- `Design capacity` renamed to `Reported design capacity`
+- kernel-reported capacity values are highlighted in red when they differ from Jolla's published **5450 mAh** specification for Jolla Phone 2026
+- a short note on the main page explains the meaning of highlighted values
+- FelisBattery does not replace or correct kernel values; it continues to display exactly what the system reports
+
 ## 0.1.2
 
 - English is the default UI language
@@ -24,11 +32,22 @@ Although it runs without sandboxing, it only reads battery and charging informat
 - voltage and calculated power
 - temperature
 - current charge
-- full and design capacity
+- reported full and design capacity
 - calculated condition
 - cycle count
 - health
 - technology
+
+
+## Published specification comparison
+
+For Jolla Phone 2026, Jolla currently publishes a battery capacity of **5450 mAh**:
+
+https://commerce.jolla.com/products/jolla-phone-october-2026
+
+FelisBattery compares the kernel-reported `CHARGE_FULL` and `CHARGE_FULL_DESIGN` values with this published capacity. If a reported value differs, the value is shown in red and a note is displayed on the main page.
+
+The application does **not** replace, scale or correct the kernel values. The highlighted value is still the value exported by the Linux power-supply interface. Other dynamic battery and charging values are shown as reported or calculated from reported runtime data; they are not marked merely because Jolla does not publish a fixed reference value for them.
 
 ## Charging diagnostics
 

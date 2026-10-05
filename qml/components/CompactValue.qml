@@ -5,6 +5,7 @@ Item {
     id: root
     property string label: ""
     property string value: "—"
+    property color valueColor: Theme.primaryColor
     height: Theme.itemSizeExtraSmall
 
     Label {
@@ -19,7 +20,7 @@ Item {
     Label {
         anchors { left: parent.left; right: parent.right; top: labelItem.bottom; topMargin: 1 }
         text: root.value
-        color: Theme.primaryColor
+        color: root.valueColor
         font.pixelSize: Theme.fontSizeSmall
         truncationMode: TruncationMode.Fade
     }

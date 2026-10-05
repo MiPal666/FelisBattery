@@ -21,7 +21,7 @@ Page {
             Label {
                 width: parent.width - 2 * Theme.horizontalPageMargin
                 x: Theme.horizontalPageMargin
-                text: "FelisBattery 0.1.2"
+                text: "FelisBattery 0.1.3"
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeLarge
             }

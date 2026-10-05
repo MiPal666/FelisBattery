@@ -35,5 +35,13 @@ CoverBackground {
             color: Theme.secondaryColor
             font.pixelSize: Theme.fontSizeSmall
         }
+
+        Label {
+            width: parent.width
+            horizontalAlignment: Text.AlignHCenter
+            text: batteryMonitor.summary.temperature || "—"
+            color: Theme.secondaryColor
+            font.pixelSize: Theme.fontSizeSmall
+        }
     }
 }

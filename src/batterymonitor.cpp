@@ -9,6 +9,7 @@
 #include <QtMath>
 
 static const QString POWER_ROOT = QStringLiteral("/sys/class/power_supply");
+static const double JOLLA_PUBLISHED_BATTERY_CAPACITY_MAH = 5450.0;
 
 BatteryMonitor::BatteryMonitor(QObject *parent)
     : QObject(parent),
@@ -141,6 +142,15 @@ void BatteryMonitor::buildSummary(const SupplyData &battery,
     const double designMah = realValue(battery, QStringLiteral("CHARGE_FULL_DESIGN"), 1000.0);
     const double condition = designMah > 0.0 ? (fullMah / designMah) * 100.0 : 0.0;
 
+    // Jolla's published Jolla Phone 2026 specification lists a 5450 mAh battery.
+    // Keep displaying the kernel values unchanged; only flag a mismatch in the UI.
+    const bool fullCapacityMismatch = m_jp2026Diagnostics
+            && fullMah > 0.0
+            && qAbs(fullMah - JOLLA_PUBLISHED_BATTERY_CAPACITY_MAH) >= 0.5;
+    const bool designCapacityMismatch = m_jp2026Diagnostics
+            && designMah > 0.0
+            && qAbs(designMah - JOLLA_PUBLISHED_BATTERY_CAPACITY_MAH) >= 0.5;
+
     const bool directOnline = integerValue(direct, QStringLiteral("ONLINE"), 0) > 0;
     const bool directCharging = directOnline
             && value(direct, QStringLiteral("STATUS")).compare(QStringLiteral("Charging"), Qt::CaseInsensitive) == 0;
@@ -235,6 +245,10 @@ void BatteryMonitor::buildSummary(const SupplyData &battery,
     s.insert(QStringLiteral("full"), fullMah > 0.0 ? QStringLiteral("%1 mAh").arg(fmt(fullMah, 0)) : QStringLiteral("—"));
     s.insert(QStringLiteral("design"), designMah > 0.0 ? QStringLiteral("%1 mAh").arg(fmt(designMah, 0)) : QStringLiteral("—"));
     s.insert(QStringLiteral("condition"), designMah > 0.0 ? QStringLiteral("%1 %").arg(fmt(condition, 0)) : QStringLiteral("—"));
+    s.insert(QStringLiteral("publishedCapacity"), QStringLiteral("%1 mAh").arg(fmt(JOLLA_PUBLISHED_BATTERY_CAPACITY_MAH, 0)));
+    s.insert(QStringLiteral("fullCapacityMismatch"), fullCapacityMismatch);
+    s.insert(QStringLiteral("designCapacityMismatch"), designCapacityMismatch);
+    s.insert(QStringLiteral("capacitySpecMismatch"), fullCapacityMismatch || designCapacityMismatch);
 
     s.insert(QStringLiteral("sourceConnected"), sourceConnected ? tr("Yes") : tr("No"));
     s.insert(QStringLiteral("chargingMode"), chargingModeUi);
@@ -316,7 +330,7 @@ void BatteryMonitor::refresh()
     m_updatedText = QDateTime::currentDateTime().toString(QStringLiteral("yyyy-MM-dd HH:mm:ss"));
 
     m_diagnosticReport =
-            QStringLiteral("FelisBattery 0.1.2\n"
+            QStringLiteral("FelisBattery 0.1.3\n"
                            "Updated: %1\n"
                            "JP2026 charger diagnostics: %2\n\n"
                            "%3\n\n"

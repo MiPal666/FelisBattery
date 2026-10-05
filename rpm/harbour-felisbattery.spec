@@ -1,7 +1,7 @@
 Name:       harbour-felisbattery
 Summary:    Battery and charger diagnostics for Jolla Phone 2026
-Version:    0.1.2
-Release:    2
+Version:    0.1.3
+Release:    1
 Group:      Qt/Qt
 License:    GPL-3.0-or-later
 URL:        https://github.com/MiPal666/FelisBattery
